@@ -939,7 +939,7 @@ pub fn redeem_reserve_collateral(
             AccountMeta::new(reserve_pubkey, false),
             AccountMeta::new(reserve_collateral_mint_pubkey, false),
             AccountMeta::new(reserve_liquidity_supply_pubkey, false),
-            AccountMeta::new(lending_market_pubkey, false),
+            AccountMeta::new_readonly(lending_market_pubkey, false),
             AccountMeta::new_readonly(lending_market_authority_pubkey, false),
             AccountMeta::new_readonly(user_transfer_authority_pubkey, true),
             AccountMeta::new_readonly(sysvar::clock::id(), false),
